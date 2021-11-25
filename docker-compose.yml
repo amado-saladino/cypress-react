@@ -1,0 +1,17 @@
+version: '3'
+services:
+  cypress:
+    image: cypress-react:v1
+    ports: 
+      - "3000:3000"
+    volumes:
+      - /e2e/node_modules
+      - .:/e2e
+  gallery:
+    image: ghcr.io/linuxserver/photoshow
+    depends_on:
+    - cypress
+    ports:
+      - "81:80"
+    volumes:
+      - ./cypress/screenshots:/Pictures:ro
