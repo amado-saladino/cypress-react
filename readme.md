@@ -50,6 +50,12 @@ services:
       - ./cypress/screenshots:/Pictures:ro
 ```
 
+Start the services:
+
+```shell
+docker-compose up -d
+```
+
 # Test report
 
 The test report will be available at `http://localhost:3000` or `https://YOUR-IP:3000`
