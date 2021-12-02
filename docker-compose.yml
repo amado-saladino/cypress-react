@@ -1,7 +1,7 @@
 version: '3'
 services:
   cypress:
-    image: cypress-react:v1
+    image: amadosaladino/cypress-react:v1
     ports: 
       - "3000:3000"
     volumes:
